@@ -6,14 +6,13 @@
 /*   By: taehykim <taehykim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 18:17:57 by taehykim          #+#    #+#             */
-/*   Updated: 2022/03/27 15:42:58 by taehykim         ###   ########.fr       */
+/*   Updated: 2022/03/29 19:12:50 by taehykim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
-int	ft_format_x(unsigned long x)
+int	ft_format_x(unsigned long long x)
 {
 	char	*result;
 	int		len;
@@ -26,7 +25,7 @@ int	ft_format_x(unsigned long x)
 	return (len);
 }
 
-int	ft_format_lx(unsigned long x)
+int	ft_format_lx(unsigned long long x)
 {
 	char	*result;
 	int		len;

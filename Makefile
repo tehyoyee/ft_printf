@@ -6,7 +6,7 @@
 #    By: taehykim <taehykim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 09:36:50 by taehykim          #+#    #+#              #
-#    Updated: 2022/03/27 15:12:28 by taehykim         ###   ########.fr        #
+#    Updated: 2022/03/30 19:56:38 by taehykim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,16 +20,14 @@ RM = rm -f
 AR = ar
 CRS = crs
 
-INCDIR = ./include/libftprintf.h
-
-SRCS = ft_dec_to.c ft_format1.c ft_format2.c ft_printf.c ft_digit_count.c
+SRCS = ft_dec_to.c ft_format1.c ft_format2.c ft_printf.c
 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 %.o: %.c
-		$(CC) $(CFLAGS) $< -o $@ -I $(INCDIR)
+		$(CC) $(CFLAGS) $< -o $@
 
 $(NAME): $(OBJS)
 		make all -C $(LIBFT)/
