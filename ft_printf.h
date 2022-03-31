@@ -6,7 +6,7 @@
 /*   By: taehykim <taehykim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 15:19:25 by taehykim          #+#    #+#             */
-/*   Updated: 2022/03/30 20:32:21 by taehykim         ###   ########.fr       */
+/*   Updated: 2022/03/31 16:14:11 by taehykim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int		ft_format_s(char *s);
 int		ft_format_d(int d);
 char	*ft_dec_to_u(unsigned int nbr);
 int		ft_printf(const char *str, ...);
+int		ft_format_else(char c);
 
 #endif

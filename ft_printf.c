@@ -6,7 +6,7 @@
 /*   By: taehykim <taehykim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:04:34 by taehykim          #+#    #+#             */
-/*   Updated: 2022/03/30 19:25:18 by taehykim         ###   ########.fr       */
+/*   Updated: 2022/03/31 16:16:29 by taehykim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,8 @@ int	format_specifier(va_list ap, char c)
 		return (ft_format_x(va_arg(ap, unsigned long long)));
 	else if (c == 'X')
 		return (ft_format_lx(va_arg(ap, unsigned long long)));
-	else if (c == '%')
-	{
-		ft_putchar_fd('%', 1);
-		return (1);
-	}
 	else
-		return (0);
+		return (ft_format_else(c));
 }
 
 int	ft_printf_2(va_list ap, const char *str)
@@ -54,6 +49,8 @@ int	ft_printf_2(va_list ap, const char *str)
 	{
 		if (str[i] && str[i] == '%')
 		{
+			if (!str[i + 1])
+				return (result);
 			result += format_specifier(ap, str[++i]);
 			i++;
 		}

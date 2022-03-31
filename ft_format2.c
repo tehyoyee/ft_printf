@@ -6,7 +6,7 @@
 /*   By: taehykim <taehykim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 18:17:57 by taehykim          #+#    #+#             */
-/*   Updated: 2022/03/29 19:12:50 by taehykim         ###   ########.fr       */
+/*   Updated: 2022/03/31 16:13:34 by taehykim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,20 @@ int	ft_format_u(unsigned int nbr)
 	free(result);
 	result = NULL;
 	return (len);
+}
+
+int	ft_format_else(char c)
+{
+	if (c == '%')
+	{
+		ft_putchar_fd('%', 1);
+		return (1);
+	}
+	else if (!c)
+		return (0);
+	else
+	{
+		ft_putchar_fd(c, 1);
+		return (1);
+	}
 }
