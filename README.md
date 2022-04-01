@@ -12,5 +12,6 @@ ___
 int ft_printf(const char *, ...);
 ```
 ___
+> 42서울 프로젝트로 printf를 구현해본다.   
 > 실제 printf와 같이 버퍼관리는 하지 않았다.   
 일단 %cspdiuxX% 의 서식지정자만 구현하였다.
