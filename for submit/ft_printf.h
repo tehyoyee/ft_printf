@@ -31,6 +31,5 @@ int		ft_format_d(int d);
 char	*ft_dec_to_u(unsigned int nbr);
 int		ft_printf(const char *str, ...);
 int		ft_format_else(char c);
-size_t	ft_strlen(const char *s);
 
 #endif
