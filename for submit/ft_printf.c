@@ -31,9 +31,9 @@ int	format_specifier(va_list ap, char c)
 	else if (c == 'u')
 		return (ft_format_u(va_arg(ap, unsigned int)));
 	else if (c == 'x')
-		return (ft_format_x(va_arg(ap, unsigned long)));
+		return (ft_format_x(va_arg(ap, unsigned int)));
 	else if (c == 'X')
-		return (ft_format_lx(va_arg(ap, unsigned long)));
+		return (ft_format_lx(va_arg(ap, unsigned int)));
 	else
 		return (ft_format_else(c));
 }

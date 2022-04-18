@@ -17,7 +17,7 @@ int	ft_format_p(void *ptr)
 	char	*result;
 	int		len;
 
-	result = ft_dec_to_hex((unsigned long)ptr, 1);
+	result = ft_dec_to_hex((unsigned long long)ptr, 1);
 	len = ft_strlen(result) + 2;
 	ft_putstr_fd("0x", 1);
 	ft_putstr_fd(result, 1);

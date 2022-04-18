@@ -18,19 +18,18 @@
 # include <stdarg.h>
 # include "libft/libft.h"
 
-char	*ft_dec_to_hex(unsigned long num, int type);
-int		ft_format_p(void *ptr);
-int		ft_format_u(unsigned int nbr);
-int		ft_format_x(unsigned long x);
-int		ft_format_lx(unsigned long x);
-int		digit_count(long x);
-int		digit_count_16(unsigned long x);
 int		ft_format_c(int c);
 int		ft_format_s(char *s);
 int		ft_format_d(int d);
-char	*ft_dec_to_u(unsigned int nbr);
-int		ft_printf(const char *str, ...);
+int		ft_format_p(void *ptr);
+int		ft_format_u(unsigned int nbr);
+int		ft_format_x(unsigned int x);
+int		ft_format_lx(unsigned int x);
 int		ft_format_else(char c);
-size_t	ft_strlen(const char *s);
+char	*ft_dec_to_hex(unsigned long long num, int type);
+char	*ft_dec_to_u(unsigned int nbr);
+int		digit_count(unsigned int x);
+int		digit_count_16(unsigned long long x);
+int		ft_printf(const char *str, ...);
 
 #endif

@@ -1,14 +1,18 @@
 #include <stdio.h>
 #include "ft_printf.h"
+#include <limits.h>
 
 int	main(void)
 {
 	char a[10] = "";
 	int		x;
 
-	x = ft_printf("");
+
+	ft_printf("%c", NULL);
+
+	x = ft_printf("%c\n", 'a');
 	printf("x = %d\n", x);
-	x = printf("");
+	x = printf("%c\n", 'a');
 	printf("x = %d\n", x);
 
 	x = ft_printf("c = %c\n", 'a');
@@ -48,9 +52,9 @@ int	main(void)
 	printf("x = %d\n\n", x);
 
 
-	x = ft_printf("x = %x\n", 0);
+	x = ft_printf("x = %x\n", 2*2147483647);
 	printf("x = %d\n", x);
-	x = printf("x = %x\n", 0);
+	x = printf("x = %x\n", 2*2147483647);
 	printf("x = %d\n\n", x);
 
 	x = ft_printf("X = %X\n", 30);
@@ -62,6 +66,6 @@ int	main(void)
 	printf("X = %d\n", x);
 	x = ft_printf("%%%");
 	printf("X = %d\n", x);
-	x = ft_printf(NULL);
 	//printf("X = %d\n", x);
+	system("leaks a.out | grep leaked");
 }

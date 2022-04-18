@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_format_x(unsigned long x)
+int	ft_format_x(unsigned int x)
 {
 	char	*result;
 	int		len;
@@ -25,7 +25,7 @@ int	ft_format_x(unsigned long x)
 	return (len);
 }
 
-int	ft_format_lx(unsigned long x)
+int	ft_format_lx(unsigned int x)
 {
 	char	*result;
 	int		len;

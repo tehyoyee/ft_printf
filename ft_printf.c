@@ -12,10 +12,6 @@
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *str, ...);
-int	ft_printf_2(va_list ap, const char *str);
-int	format_specifier(va_list ap, char c);
-
 int	format_specifier(va_list ap, char c)
 {
 	if (c == 'c')
@@ -31,9 +27,9 @@ int	format_specifier(va_list ap, char c)
 	else if (c == 'u')
 		return (ft_format_u(va_arg(ap, unsigned int)));
 	else if (c == 'x')
-		return (ft_format_x(va_arg(ap, unsigned long)));
+		return (ft_format_x(va_arg(ap, unsigned int)));
 	else if (c == 'X')
-		return (ft_format_lx(va_arg(ap, unsigned long)));
+		return (ft_format_lx(va_arg(ap, unsigned int)));
 	else
 		return (ft_format_else(c));
 }

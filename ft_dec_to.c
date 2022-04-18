@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	digit_count_16(unsigned long x)
+int	digit_count_16(unsigned long long x)
 {
 	int	cnt;
 
@@ -25,7 +25,7 @@ int	digit_count_16(unsigned long x)
 	return (cnt);
 }
 
-int	digit_count(long x)
+int	digit_count(unsigned int x)
 {
 	int	cnt;
 
@@ -38,7 +38,7 @@ int	digit_count(long x)
 	return (cnt);
 }
 
-char	*ft_dec_to_hex(unsigned long num, int type)
+char	*ft_dec_to_hex(unsigned long long num, int type)
 {
 	char			*result;
 	int				len;
@@ -50,12 +50,13 @@ char	*ft_dec_to_hex(unsigned long num, int type)
 	if (!result)
 		return (NULL);
 	result[len] = '\0';
-	while (len > 0)
+	len--;
+	while (len >= 0)
 	{
 		if (type == 1)
-			result[--len] = "0123456789abcdef"[num % 16];
+			result[len--] = "0123456789abcdef"[num % 16];
 		else
-			result[--len] = "0123456789ABCDEF"[num % 16];
+			result[len--] = "0123456789ABCDEF"[num % 16];
 		num /= 16;
 	}
 	return (result);
